@@ -1,0 +1,54 @@
+/** 1. Tag it as client component */
+"use client";
+import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
+
+/** 2. Import your components */
+import Page from "./Page";
+import Services from "./Services";
+import Heading from "./Heading";
+import Hero from "./Hero";
+import SimpleContent from "./SimpleContent";
+import RichTextContent from "./RichTextContent";
+import Teaser from "./Teaser";
+import ButtonLink from "./ButtonLink";
+import ImageTextSplit from "./ImageTextSplit";
+import Grid from "./Grid";
+import Feature from "./Feature";
+import Hightlight from "./Hightlight";
+import Section from "./Section";
+import ServicesNavigation from "./ServicesNavigation";
+import Config from "./Config";
+import MenuLink from "./MenuLink";
+import SubmenuLink from "./SubmenuLink";
+import FooterLink from "./FooterLink";
+
+/** 3. Initialize it as usual */
+storyblokInit({
+  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_API_TOKEN,
+  use: [apiPlugin],
+  components: {
+    page: Page,
+    services: Services,
+    heading: Heading,
+    hero: Hero,
+    buttonLink: ButtonLink,
+    grid: Grid,
+    feature: Feature,
+    teaser: Teaser,
+    hightlight: Hightlight,
+    section: Section,
+    servicesNavigation: ServicesNavigation,
+    // config: Config,
+    "simple-content": SimpleContent,
+    "rich-text-content": RichTextContent,
+    "image-text-split": ImageTextSplit,
+    "menu_link": MenuLink,
+    "submenu_link": SubmenuLink,
+    "footer_link": FooterLink,
+
+  },
+});
+
+export default function StoryblokProvider({ children }) {
+  return children;
+}
