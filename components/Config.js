@@ -9,7 +9,7 @@ const Config = ({ blok }) => {
   // console.log("config file", blok);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div className="relative bg-gray-100 border-b border-gray-100 py-2">
+    <div className="relative bg-gray-100 border-b border-gray-100">
       <div className="md:max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -20,8 +20,8 @@ const Config = ({ blok }) => {
                   src={blok?.logo?.filename}
                   alt="Pool Cleaning Services"
                   className="h-full object-cove"
-                  width={150}
-                  height={130}
+                  width={80}
+                  height={40}
                 />
               ): "Pool Cleaning Services"}
             </Link>

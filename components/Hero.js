@@ -26,6 +26,7 @@ const Hero = ({ blok }) => {
           alt="Background image of hero"
           fill
           className="absolute top-0 left-0 z-0 w-full h-full object-cover"
+          priority
         />
       )}
       {blok?.body?.map((nestedBlok) => (

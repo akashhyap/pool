@@ -20,6 +20,7 @@ import ServicesNavigation from "./ServicesNavigation";
 import Config from "./Config";
 import MenuLink from "./MenuLink";
 import SubmenuLink from "./SubmenuLink";
+import SideNavLink from "./SideNavLink";
 import FooterLink from "./FooterLink";
 
 /** 3. Initialize it as usual */
@@ -38,14 +39,14 @@ storyblokInit({
     hightlight: Hightlight,
     section: Section,
     servicesNavigation: ServicesNavigation,
+    sideNavLink: SideNavLink,
     // config: Config,
     "simple-content": SimpleContent,
     "rich-text-content": RichTextContent,
     "image-text-split": ImageTextSplit,
-    "menu_link": MenuLink,
-    "submenu_link": SubmenuLink,
-    "footer_link": FooterLink,
-
+    menu_link: MenuLink,
+    submenu_link: SubmenuLink,
+    footer_link: FooterLink,
   },
 });
 
