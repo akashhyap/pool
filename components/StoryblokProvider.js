@@ -7,6 +7,7 @@ import Page from "./Page";
 import Services from "./Services";
 import Heading from "./Heading";
 import Hero from "./Hero";
+import HomeHero from "./HomeHero";
 import SimpleContent from "./SimpleContent";
 import RichTextContent from "./RichTextContent";
 import Teaser from "./Teaser";
@@ -32,6 +33,7 @@ storyblokInit({
     services: Services,
     heading: Heading,
     hero: Hero,
+    "home-hero": HomeHero,
     buttonLink: ButtonLink,
     grid: Grid,
     feature: Feature,

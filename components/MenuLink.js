@@ -20,7 +20,7 @@ const MenuLink = ({ blok, closeMenu }) => {
           >
             {({ open }) => (
               <>
-                <Menu.Button className="text-lg md:text-base mb-4 md:mb-0 font-medium text-black hover:text-gray-900">
+                <Menu.Button className="text-lg md:text-base mb-4 md:mb-0 text-white">
                   <span className="flex items-center gap-x-2">
                     {blok?.name} <IoMdArrowDropdown className="text-lg" />
                   </span>
@@ -34,14 +34,14 @@ const MenuLink = ({ blok, closeMenu }) => {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                  <Menu.Items className="origin-top-right absolute right-0 mt-8 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                  <Menu.Items className="origin-top-right absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                     <div className="p-4 flex flex-col gap-y-2">
                       {blok?.menu?.map((subItem, index) => (
                         <Menu.Item key={`${subItem._uid}-${index}`}>
                           {({ active }) => (
                             <Link
                               href={`/${subItem?.link?.cached_url}`}
-                              className="text-lg md:text-base mb-4 md:mb-0 font-medium text-black hover:text-gray-900"
+                              className="text-lg md:text-base mb-4 md:mb-0 text-black hover:text-gray-900"
                             >
                               {subItem.name}
                             </Link>
@@ -54,10 +54,10 @@ const MenuLink = ({ blok, closeMenu }) => {
               </>
             )}
           </Menu>
-          <Popover key={blok._uid} className="mt-4 md:hidden">
+          <Popover key={blok._uid} className="md:hidden">
             {({ open }) => (
               <>
-                <Popover.Button className="flex justify-between items-center w-full py-2 text-lg mt-2 md:mt-0 font-medium text-black hover:text-gray-900">
+                <Popover.Button className="flex justify-between items-center w-full py-2 text-lg md:mt-0 text-white md:text-black md:hover:text-gray-900">
                   {blok.name}
                   <span>
                     {open ? (
@@ -84,7 +84,7 @@ const MenuLink = ({ blok, closeMenu }) => {
                       <Link
                         key={subItem._uid}
                         href={`/${subItem?.link?.cached_url}`}
-                        className="text-lg md:text-base mb-2 md:mb-0 font-medium text-black hover:text-gray-900"
+                        className="text-lg md:text-base mb-2 md:mb-0 text-black hover:text-gray-900"
                         onClick={closeMenu}
                       >
                         {subItem.name}
@@ -97,10 +97,10 @@ const MenuLink = ({ blok, closeMenu }) => {
           </Popover>
         </>
       ) : (
-        <div className="relative text-left hidden md:inline-block z-10">
+        <div className="relative text-left inline-block z-10">
           <Link
             href={`/${blok.link.cached_url}`}
-            className="menulinks text-lg md:text-base mb-4 md:mb-0 font-medium text-black hover:text-gray-900"
+            className="menulinks text-lg md:text-base mb-4 md:mb-0 text-white"
             onClick={closeMenu}
           >
             {blok.name}

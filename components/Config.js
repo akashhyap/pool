@@ -9,27 +9,29 @@ const Config = ({ blok }) => {
   // console.log("config file", blok);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div className="relative bg-gray-100 border-b border-gray-100">
-      <div className="md:max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link href="/">
+    <div className="absolute w-full md:w-[66.66%]">
+      <div className="md:max-w-6xl mx-auto px-6 lg:px-12">
+        <div className="flex justify-between items-center py-3 md:justify-start">
+          <div className="flex justify-start flex-1 md:order-2">
+            <Link href="/" className="md:ml-auto">
               <span className="sr-only">Pool Cleaning Services</span>
               {blok?.logo ? (
                 <img
                   src={blok?.logo?.filename}
                   alt="Pool Cleaning Services"
-                  className="h-full object-cove"
-                  width={80}
-                  height={40}
+                  className="h-full object-cover"
+                  width={110}
+                  height={60}
                 />
-              ): "Pool Cleaning Services"}
+              ) : (
+                "Pool Cleaning Services"
+              )}
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-black hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
               onClick={() => setMenuOpen(!menuOpen)}
             >
               <span className="sr-only">Open menu</span>
@@ -90,7 +92,7 @@ const Config = ({ blok }) => {
         leaveTo="-translate-x-full"
         as={Fragment}
       >
-        <div className="fixed top-0 left-0 w-10/12 h-screen bg-white overflow-y-auto z-50 shadow-lg">
+        <div className="fixed top-0 left-0 w-10/12 h-screen bg-[#28292a] overflow-y-auto z-50 shadow-lg">
           <div className="overflow-hidden">
             <div className="px-5 pt-4 flex items-center justify-between">
               <div>
@@ -104,13 +106,15 @@ const Config = ({ blok }) => {
                       width={180}
                       height={150}
                     />
-                  ): "Pool Cleaning Services"}
+                  ) : (
+                    "Pool Cleaning Services"
+                  )}
                 </Link>
               </div>
               <div className="-mr-2">
                 <button
                   type="button"
-                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+                  className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
                   onClick={() => setMenuOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
