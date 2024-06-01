@@ -12,7 +12,7 @@ const HomeHero = ({ blok }) => {
   //   };
 
   return (
-    <div className="xl:container mx-auto flex flex-wrap lg:flex-nowrap overflow-hidden" {...storyblokEditable(blok)}>
+    <div className="2xl:container mx-auto flex flex-wrap lg:flex-nowrap overflow-hidden" {...storyblokEditable(blok)}>
       <div className="bg-[#28292a] lg:basis-8/12 py-[100px] px-6 lg:px-12 lg:pr-40">
         <h1 className="text-white pt-10 xl:leading-tight">{blok.title}</h1>
         <p className="text-white">{blok.subtitle}</p>
