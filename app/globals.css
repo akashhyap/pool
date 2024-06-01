@@ -59,19 +59,19 @@ h2 {
 }
 
 .m-w-4xl {
-    @apply max-w-[90%] md:max-w-4xl
+    @apply max-w-[90%] lg:max-w-4xl
 }
 
 .m-w-5xl {
-    @apply max-w-[90%] md:max-w-5xl
+    @apply max-w-[90%] lg:max-w-5xl
 }
 
 .m-w-6xl {
-    @apply max-w-[90%] md:max-w-6xl
+    @apply max-w-[90%] lg:max-w-6xl
 }
 
 .m-w-7xl {
-    @apply max-w-[90%] md:max-w-7xl
+    @apply max-w-[90%] lg:max-w-7xl
 }
 
 .m-h-400px {

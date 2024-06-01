@@ -4,7 +4,7 @@ import Link from "next/link";
 const Grid = ({ blok }) => {
   return (
     <div className="grid_block" {...storyblokEditable(blok)}>
-      <div className="container mx-auto px-4 md:px-3">
+      <div className="px-0 sm:px-4 xl:px-0">
         <div
           className={`mb-12 ${
             blok.right ? "flex items-center md:justify-between" : "block"

@@ -11,27 +11,29 @@ const Hero = ({ blok }) => {
   };
 
   return (
-    <div
-      className={`hero relative flex items-center justify-center overflow-hidden ${
-        blok.minHeight
-      } ${blok.maxWidth} ${
-        blok.maxWidth ? "mx-auto rounded-lg" : ""
-      } overflow-hidden`}
-      style={inlineStyle}
-      {...storyblokEditable(blok)}
-    >
-      {blok?.backgroundImage?.filename && (
-        <Image
-          src={`${blok?.backgroundImage?.filename}`}
-          alt="Background image of hero"
-          fill
-          className="absolute top-0 left-0 z-0 w-full h-full object-cover"
-          priority
-        />
-      )}
-      {blok?.body?.map((nestedBlok) => (
-        <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
-      ))}
+    <div className="px-0 sm:px-4 lg:px-3">
+      <div
+        className={`hero relative flex items-center justify-center overflow-hidden ${
+          blok.minHeight
+        } ${blok.maxWidth} ${
+          blok.maxWidth ? "mx-auto rounded-lg" : ""
+        } overflow-hidden`}
+        style={inlineStyle}
+        {...storyblokEditable(blok)}
+      >
+        {blok?.backgroundImage?.filename && (
+          <Image
+            src={`${blok?.backgroundImage?.filename}`}
+            alt="Background image of hero"
+            fill
+            className="absolute top-0 left-0 z-0 w-full h-full object-cover"
+            priority
+          />
+        )}
+        {blok?.body?.map((nestedBlok) => (
+          <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+        ))}
+      </div>
     </div>
   );
 };

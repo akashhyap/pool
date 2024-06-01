@@ -4,15 +4,20 @@ import Link from "next/link";
 import { StoryblokComponent } from "@storyblok/react";
 import { Transition } from "@headlessui/react";
 import CustomStoryblokComponent from "./StoryblokMenuComponent";
+import { usePathname } from "next/navigation";
 
 const Config = ({ blok }) => {
   // console.log("config file", blok);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   return (
-    <div className="absolute w-full md:w-[66.66%]">
-      <div className="md:max-w-6xl mx-auto px-6 lg:px-12">
-        <div className="flex justify-between items-center py-3 md:justify-start">
-          <div className="flex justify-start flex-1 md:order-2">
+    <div className={`z-50 w-full ${isHome ? "absolute" : "bg-[#28292a]"}`}>
+      <div className="md:max-w-6xl mx-auto">
+        <div className="flex justify-between items-center py-3 px-4">
+          {/* Logo */}
+          <div className={`flex justify-start ${isHome ? "md:order-2" : ""}`}>
             <Link href="/" className="md:ml-auto">
               <span className="sr-only">Pool Cleaning Services</span>
               {blok?.logo ? (
@@ -28,6 +33,7 @@ const Config = ({ blok }) => {
               )}
             </Link>
           </div>
+          {/* Toggle Menu */}
           <div className="-mr-2 -my-2 md:hidden">
             <button
               type="button"
@@ -53,6 +59,7 @@ const Config = ({ blok }) => {
               </svg>
             </button>
           </div>
+          {/* Main Menu */}
           <nav className="hidden md:flex space-x-8">
             {blok?.header_menu?.map((nestedBlok) => (
               <StoryblokComponent
@@ -62,6 +69,12 @@ const Config = ({ blok }) => {
               />
             ))}
           </nav>
+          <Link
+            href="/"
+            className={`text-white bg-black rounded-lg px-3 py-2 text-sm md:order-3 hidden md:inline-block ${isHome ? "md:order-3" : ""}`}  
+          >
+            Contact Us
+          </Link>
         </div>
       </div>
 
@@ -101,7 +114,7 @@ const Config = ({ blok }) => {
                   {blok?.logo ? (
                     <img
                       src={blok?.logo?.filename}
-                      alt="TrustSEO"
+                      alt="Pool Cleaning"
                       className="h-full object-cove"
                       width={180}
                       height={150}

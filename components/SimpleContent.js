@@ -13,7 +13,7 @@ const SimpleContent = ({ blok }) => {
   return (
     <div
       {...storyblokEditable(blok)}
-      className={`relative z-10 px-4 sm:px-6 container ${blok.maxWidth} ${
+      className={`relative z-10 container ${blok.maxWidth} ${
         blok.maxWidth ? "mx-auto" : ""
       } ${blok.contentAlign}`}
       style={inlineStyle}

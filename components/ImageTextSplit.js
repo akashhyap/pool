@@ -15,7 +15,7 @@ const ImageTextSplit = ({ blok }) => {
           blok.reverse ? "flex-row-reverse" : ""
         } ${blok.alignItem}`}
       >
-        <div className="relative aspect-square md:flex-1">
+        <div className="w-full relative aspect-square md:flex-1">
           <Image
             src={blok?.image?.filename}
             alt=""
