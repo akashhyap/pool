@@ -7,10 +7,16 @@ import CustomStoryblokComponent from "./StoryblokMenuComponent";
 import { usePathname } from "next/navigation";
 
 const Config = ({ blok }) => {
-  // console.log("config file", blok);
+  console.log("config file", blok);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
+
+  const dimensionLogo = {
+    width: blok?.widthLogo,
+    height: blok?.heightLogo
+  };
+  // console.log(dimensionLogo);
 
   return (
     <div className={`z-50 w-full ${isHome ? "absolute" : "bg-[#28292a]"}`}>
@@ -25,8 +31,8 @@ const Config = ({ blok }) => {
                   src={blok?.logo?.filename}
                   alt="Pool Cleaning Services"
                   className="h-full object-cover"
-                  width={110}
-                  height={60}
+                  width={blok.widthLogo}
+                  height={blok.heightLogo}
                 />
               ) : (
                 "Pool Cleaning Services"
@@ -71,7 +77,9 @@ const Config = ({ blok }) => {
           </nav>
           <Link
             href="/"
-            className={`text-white bg-black rounded-lg px-3 py-2 text-sm md:order-3 hidden md:inline-block ${isHome ? "md:order-3" : ""}`}  
+            className={`text-white bg-black rounded-lg px-3 py-2 text-sm md:order-3 hidden md:inline-block ${
+              isHome ? "md:order-3" : ""
+            }`}
           >
             Contact Us
           </Link>
