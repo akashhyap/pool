@@ -24,7 +24,7 @@ const HomeHero = ({ blok }) => {
             {blok?.buttonLeftLabel}
           </Link>
         </div>
-        <p className="text-white text-sm flex items-center space-x-1"><IoShieldCheckmark/> <span>{blok.notes}</span></p>
+        <p className="text-white text-sm lg:flex lg:items-center space-x-1"><IoShieldCheckmark className="inline-block"/> <span>{blok.notes}</span></p>
       </div>
       <div className="relative flex-1 lg:py-5">
         <div className="md:hidden text-center z-20 w-full absolute md:relative bottom-5 md:bottom-0 md:mt-3">
