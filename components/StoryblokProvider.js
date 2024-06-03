@@ -23,6 +23,8 @@ import MenuLink from "./MenuLink";
 import SubmenuLink from "./SubmenuLink";
 import SideNavLink from "./SideNavLink";
 import FooterLink from "./FooterLink";
+import Contact from "./Contact";
+
 
 /** 3. Initialize it as usual */
 storyblokInit({
@@ -49,6 +51,7 @@ storyblokInit({
     menu_link: MenuLink,
     submenu_link: SubmenuLink,
     footer_link: FooterLink,
+    contact: Contact,
   },
 });
 

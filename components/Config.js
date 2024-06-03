@@ -7,7 +7,7 @@ import CustomStoryblokComponent from "./StoryblokMenuComponent";
 import { usePathname } from "next/navigation";
 
 const Config = ({ blok }) => {
-  console.log("config file", blok);
+  // console.log("config file", blok);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
