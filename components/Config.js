@@ -76,7 +76,7 @@ const Config = ({ blok }) => {
             ))}
           </nav>
           <Link
-            href="/"
+            href="/contact"
             className={`text-white bg-black rounded-lg px-3 py-2 text-sm md:order-3 hidden md:inline-block ${
               isHome ? "md:order-3" : ""
             }`}

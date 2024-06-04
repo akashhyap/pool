@@ -82,10 +82,7 @@ export async function POST(request) {
                         border-bottom: 1px solid #dddddd;
                       "
                     >
-                      <img
-                        src="https://supercellgroup.com/supercell-group-transparent.png"
-                        style="width:250px"
-                      />
+                      Lucky Pools
                     </p>
                     <p
                       style="
